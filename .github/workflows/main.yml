@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     
     container:
-      image: cirrusci/flutter
+      image: cirrusci/flutter:latest
     
     steps:
     - uses: actions/checkout@v1
     - name: Get packages
-      run: flutter pub get
+      run: sudo flutter pub get
     - name: Run flutter tests
       run: flutter analyze
