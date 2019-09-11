@@ -47,7 +47,7 @@ class _BoardsState extends State<Boards> {
                         decoration:
                             BoxDecoration(border: Border(right: BorderSide())),
 
-                        /// A board's with is at least 200 logical pixels
+                        /// A board's width is at least 200 logical pixels
                         /// or 1/number of boards of the entire screen width
                         width: max(
                             MediaQuery.of(context).size.width /
@@ -60,7 +60,7 @@ class _BoardsState extends State<Boards> {
                               color: Colors.black,
                             ),
                             ...widget.boards[name].map(
-                              /// The callbacks are used to determine if the Delete Space should be shown
+                              /// The callbacks are used to determine if the Delete Bar should be shown
                               (t) => TaskWidget(
                                 data: [t, name],
                                 dragStartedCallback: () =>
